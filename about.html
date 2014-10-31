@@ -9,7 +9,8 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style2.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- Leave those next 4 lines if you care about users using IE8 -->
@@ -20,7 +21,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">
+     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent " role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -30,32 +31,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Hangover</a>
+          <a class="navbar-brand" href="#"><img src="image/logo.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kits <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Small Party</a></li>
-                <li><a href="#">Party of the year</a></li>
-                <li><a href="#">The Special One</a></li>
-                <li class="divider"></li>
-                <li><a href="#">VIP Kit</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Propose your kit</a></li>
-              </ul>
-            </li>
-          </ul>
-
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="btn btn-primary" id="nav-btn" data-toggle="modal" data-target="#myModal" >Order your kit</a></li>
+            <li><a href="index.html"><i class="fa fa-home"></i> Home </a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> More <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="index.html">Index</a></li>
+                <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
                 <li class="divider"></li>
@@ -66,6 +53,59 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+
+     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"><h3>Order Now</h3></h4>
+              </div>
+              <div class="modal-body">
+
+                <form role="form">
+                  <div class="form-group">
+                    <label for="Name">Full Name</label>
+                    <input type="name" class="form-control" id="Name" placeholder="Leonardo Di Caprio">
+                  </div>
+                  <div class="form-group">
+                    <label for="Address">Your adress</label>
+                    <input type="adress" class="form-control" id="Address" placeholder="Hollywood Avenue">
+                  </div>
+                  <div class="form-group">
+                    <label for="emailAddress">Your mail</label>
+                    <input type="email" class="form-control" id="emailAddress" placeholder="di.caprio@gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label>
+                      <input type="radio" name="gender" value="m">
+                      I can wait
+                    </label>
+                    <label>
+                      <input type="radio" name="gender" value="f">
+                      Emergency
+                    </label>
+                  </div>
+
+                  <div class="form-group">
+                    Select your kit
+                    <select name="flavor" class="form-control">
+                      <option value="m">Small Party</option>
+                      <option value="f">Party of the year</option>
+                      <option value="f">The Special One</option>
+                      <option value="f">VIP</option>
+                    </select>
+                  </div>
+
+                  <input type="submit" value="Order Now" class="btn btn-danger">
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
 
 
     </div>
